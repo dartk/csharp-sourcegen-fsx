@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <NoWarn>1701;1702;NU5128</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Dartk.CSharp.SourceGen.Fsx</PackageId>
+        <Authors>Dmitry Artemkin</Authors>
+        <Copyright>2023</Copyright>
+        <PackageVersion>0.1.0-alpha1</PackageVersion>
+        <Description>C# source generator that runs F# scripts</Description>
+        <RepositoryUrl>https://github.com/dartk/csharp-sourcegen-fsx</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/dartk/csharp-sourcegen-fsx</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Package the generator in the analyzer directory of the nuget package -->
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
+</Project>
