@@ -14,15 +14,17 @@
 
     <PropertyGroup>
         <PackageId>Dartk.CSharp.SourceGen.Fsx</PackageId>
+        <Title>CSharp.SourceGen.Fsx</Title>
         <Authors>Dmitry Artemkin</Authors>
         <Copyright>2023</Copyright>
-        <PackageVersion>0.1.0-alpha1</PackageVersion>
-        <Description>C# source generator that runs F# scripts</Description>
+        <Description>Generate C# code from F# scripts</Description>
+        <PackageProjectUrl>https://github.com/dartk/csharp-sourcegen-fsx</PackageProjectUrl>
         <RepositoryUrl>https://github.com/dartk/csharp-sourcegen-fsx</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageProjectUrl>https://github.com/dartk/csharp-sourcegen-fsx</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>C# scripting code generation</PackageTags>
+        <PackageVersion>0.3.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
