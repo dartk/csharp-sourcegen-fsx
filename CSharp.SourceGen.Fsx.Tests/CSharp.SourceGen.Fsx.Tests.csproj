@@ -9,22 +9,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\CSharp.SourceGen.Fsx\CSharp.SourceGen.Fsx.csproj" OutputItemType="Analyzer" />
+        <ProjectReference Include="..\CSharp.SourceGen.Fsx\CSharp.SourceGen.Fsx.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
-      <PackageReference Include="xunit" Version="2.4.2" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+        <PackageReference Include="xunit" Version="2.4.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="content.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
-
-    <ItemGroup>
-      <AdditionalFiles Include="generator.fsx" />
+        <AdditionalFiles Include="content.txt">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AdditionalFiles>
+        <AdditionalFiles Include="generator.fsx" />
+        <None Remove="AdditionalFiles\generator.fsx" />
+        <None Remove="AdditionalFiles\content.txt" />
     </ItemGroup>
 
     <PropertyGroup>
